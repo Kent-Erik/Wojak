@@ -1,0 +1,18 @@
+#! /bin/bash
+
+var=$(curl -s https://api.wojakindex.biz/current_wojak_index.json | jq --raw-output '.pink_wojak_index')
+
+if [[ $var > 705 ]]
+then
+
+	echo $var
+	echo market blood
+
+else
+
+	echo $var
+	echo neutral
+
+fi
+#echo "Wojakindex right now is $var"
+
